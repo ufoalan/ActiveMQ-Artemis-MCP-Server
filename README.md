@@ -290,7 +290,29 @@ export AMQ_ORIGIN=mydomain.com
 python amq-jolokia-server.py
 ```
 
-### 2. In Claude (or MCP client)
+### 2. Configure Claude Desktop
+## 2a. Edit claude_desktop_config.json and add below
+
+{
+  "mcpServers": {
+    "amq-jolokia-server": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/Users/alanlee/RedHat/mcp-test/amq-jolokia-server",
+        "run",
+        "amq-jolokia-server.py"
+      ]
+    }
+  }
+}
+
+## 2b. Start Claude Desktop
+**Step 1: Start the Claude Desktop**
+**Step 2: Click "Search and tools" at the bottom of the UI**
+**Step 3: Check if "amq-jolokia-server" appears in the menu, it should be enabled**
+
+### 3. In Claude (or MCP client)
 
 **Step 1: Authenticate**
 ```
