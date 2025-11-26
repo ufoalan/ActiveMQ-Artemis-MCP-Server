@@ -404,7 +404,7 @@ export AMQ_HOST=localhost
 export AMQ_PORT=8161
 export AMQ_BROKER_NAME=amq-broker-primary
 export AMQ_ORIGIN=localhost
-python amq-jolokia-server.py
+uv run amq-jolokia-server.py
 ```
 
 ### Remote Production Environment
@@ -413,7 +413,7 @@ export AMQ_HOST=amq-prod.example.com
 export AMQ_PORT=8161
 export AMQ_BROKER_NAME=amq-broker-primary
 export AMQ_ORIGIN=example.com
-python amq-jolokia-server.py
+uv run amq-jolokia-server.py
 ```
 
 ## Code Quality
