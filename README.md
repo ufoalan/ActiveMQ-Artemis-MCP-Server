@@ -14,6 +14,7 @@ Red Hat AMQ 7.12.1
 - **Framework:** FastMCP
 - **Protocol:** Model Context Protocol (MCP)
 - **Python:** 3.8+
+- **uv:** 0.8.4
 
 ## Architecture
 
@@ -267,14 +268,18 @@ aiohttp>=3.8.0
 
 **Installation:**
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/ufoalan/ActiveMQ-Artemis-MCP-Server.git
+cd ActiveMQ-Artemis-MCP-Server
+uv venv
+source .venv/bin/activate
+uv pip install -r requirements.txt
 ```
 
 ### Dependency Details
 
 | Package | Version | Purpose |
 |---------|---------|---------|
-| mcp | >=0.1.0 | Model Context Protocol library and FastMCP |
+| mcp | >=0.0.1 | Model Context Protocol library and FastMCP |
 | aiohttp | >=3.8.0 | Async HTTP client for Jolokia API calls |
 
 ## Usage Flow
@@ -287,7 +292,7 @@ export AMQ_PORT=8161
 export AMQ_BROKER_NAME=amq-broker-primary
 export AMQ_ORIGIN=mydomain.com
 
-python amq-jolokia-server.py
+uv run amq-jolokia-server.py
 ```
 
 ### 2. Configure Claude Desktop
@@ -299,7 +304,7 @@ python amq-jolokia-server.py
       "command": "uv",
       "args": [
         "--directory",
-        "/Users/alanlee/RedHat/mcp-test/amq-jolokia-server",
+        "<ActiveMQ_Artemis-MCP-Server Home>",
         "run",
         "amq-jolokia-server.py"
       ]

@@ -12,3 +12,8 @@ dependencies = [
     "starlette>=0.50.0",
     "uvicorn>=0.38.0",
 ]
+
+[tool.uv.workspace]
+members = [
+    "ActiveMQ-Artemis-MCP-Server",
+]
