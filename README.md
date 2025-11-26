@@ -18,7 +18,7 @@ This is a Model Context Protocol (MCP) server that provides Claude with access t
 
 ```
 amq-jolokia-mcp-server/
-├── amq_server.py          # Main source file
+├── amq-jolokia-server.py          # Main source file
 ├── requirements.txt       # Python dependencies
 └── README.md             # This file
 ```
@@ -284,7 +284,7 @@ export AMQ_PORT=8161
 export AMQ_BROKER_NAME=amq-broker-primary
 export AMQ_ORIGIN=mydomain.com
 
-python amq_server.py
+python amq-jolokia-server.py
 ```
 
 ### 2. In Claude (or MCP client)
@@ -374,7 +374,7 @@ export AMQ_HOST=localhost
 export AMQ_PORT=8161
 export AMQ_BROKER_NAME=amq-broker-primary
 export AMQ_ORIGIN=localhost
-python amq_server.py
+python amq-jolokia-server.py
 ```
 
 ### Remote Production Environment
@@ -383,7 +383,7 @@ export AMQ_HOST=amq-prod.example.com
 export AMQ_PORT=8161
 export AMQ_BROKER_NAME=amq-broker-primary
 export AMQ_ORIGIN=example.com
-python amq_server.py
+python amq-jolokia-server.py
 ```
 
 ## Code Quality
@@ -409,7 +409,7 @@ python amq_server.py
 # Verify connection
 export AMQ_HOST=localhost
 export AMQ_PORT=8161
-python amq_server.py
+python amq-jolokia-server.py
 
 # In Claude/MCP client:
 login("admin", "admin-password")
