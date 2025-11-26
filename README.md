@@ -2,7 +2,10 @@
 
 ## Overview
 
-This is a Model Context Protocol (MCP) server that provides Claude with access to Red Hat AMQ 7.13+ via the Jolokia API. It uses FastMCP for simplified server implementation and aiohttp for async HTTP communication.
+This is a Model Context Protocol (MCP) server that provides Claude with access to Red Hat AMQ 7.12+ via the Jolokia API. It uses FastMCP for simplified server implementation and aiohttp for async HTTP communication.
+
+## Tested AMQ version
+Red Hat AMQ 7.12.1
 
 ## Project Information
 
